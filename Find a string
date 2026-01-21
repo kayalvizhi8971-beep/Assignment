@@ -1,0 +1,10 @@
+public class SubStringExample {
+    public static void main(String[] args) {
+        String username = "Kayalvizhi";
+
+        // First 4 characters
+        String part = username.substring(0, 4);
+
+        System.out.println("First few characters: " + part);
+    }
+}
