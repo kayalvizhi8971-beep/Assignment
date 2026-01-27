@@ -1,0 +1,23 @@
+import com.bank.finance.InterestRate;
+
+class SavingsAccount implements InterestRate {
+    public double calculateInterest(double amount) {
+        return amount * 0.04;
+    }
+}
+
+class LoanAccount implements InterestRate {
+    public double calculateInterest(double amount) {
+        return amount * 0.10;
+    }
+}
+
+public class BankMain {
+    public static void main(String[] args) {
+        SavingsAccount s = new SavingsAccount();
+        LoanAccount l = new LoanAccount();
+
+        System.out.println("Savings Interest: " + s.calculateInterest(10000));
+        System.out.println("Loan Interest: " + l.calculateInterest(10000));
+    }
+}
