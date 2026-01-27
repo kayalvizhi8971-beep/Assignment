@@ -1,0 +1,23 @@
+interface GasolineEngine {
+    void refuel();
+}
+
+interface ElectricMotor {
+    void recharge();
+}
+
+class HybridCar implements GasolineEngine, ElectricMotor {
+    public void refuel() {
+        System.out.println("Car is refueling petrol");
+    }
+
+    public void recharge() {
+        System.out.println("Car is recharging battery");
+    }
+
+    public static void main(String[] args) {
+        HybridCar car = new HybridCar();
+        car.refuel();
+        car.recharge();
+    }
+}
