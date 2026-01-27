@@ -1,0 +1,35 @@
+class InsufficientFundsException extends Exception {
+    InsufficientFundsException(String msg) {
+        super(msg);
+    }
+}
+
+class NegativeAmountException extends Exception {
+    NegativeAmountException(String msg) {
+        super(msg);
+    }
+}
+
+public class Payment {
+    public static void main(String[] args) {
+        double balance = 500;
+
+        try {
+            double amount = -200;
+
+            if (amount < 0)
+                throw new NegativeAmountException("Negative amount not allowed");
+
+            if (amount > balance)
+                throw new InsufficientFundsException("Insufficient balance");
+
+            System.out.println("Payment successful");
+        }
+        catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+        finally {
+            System.out.println("Database connection closed");
+        }
+    }
+}
