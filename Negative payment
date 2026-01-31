@@ -1,23 +1,31 @@
 class CheckoutApp {
 
-    static void pay(int balance, int amount) throws Exception {
-        if (amount < 0) throw new Exception("Negative amount");
-        if (amount > balance) throw new Exception("Insufficient funds");
-        System.out.println("Payment OK");
+    static void pay(int bal, int amt) throws Exception {
+
+        if (amt < 0)
+            throw new Exception("Amount should not be negative");
+
+        if (amt > bal)
+            throw new Exception("Not enough balance");
+
+        System.out.println("Payment Success");
     }
 
     public static void main(String[] args) {
 
-        System.out.println("DB Open");
+        int balance = 5000;
+        int amount = -100;   // change value to test
+
+        System.out.println("Connection Open");
 
         try {
-            pay(5000, 7000);
+            pay(balance, amount);
         }
         catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
+            System.out.println("Message: " + e.getMessage());
         }
         finally {
-            System.out.println("DB Closed");
+            System.out.println("Connection Closed");
         }
     }
 }
