@@ -1,0 +1,14 @@
+interface kayal{
+    void vizhi();
+}
+class Muthu implements kayal{
+    public void vizhi(){
+        System.out.println("welcome");
+    }
+}
+class Main {
+    public static void main(String[] args) {
+       Muthu m=new Muthu();
+       m.vizhi();
+    }
+}
