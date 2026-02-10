@@ -1,0 +1,6 @@
+class Employee {
+    void work(){ System.out.println("Working"); }
+}
+class Manager extends Employee {
+    void manage(){ System.out.println("Managing"); }
+}
