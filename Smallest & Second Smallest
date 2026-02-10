@@ -1,0 +1,17 @@
+class SmallestTwo {
+    public static void main(String[] args) {
+        int arr[] = {5,2,8,1,3};
+        int first=Integer.MAX_VALUE, second=Integer.MAX_VALUE;
+
+        for(int n : arr){
+            if(n < first){
+                second = first;
+                first = n;
+            } else if(n < second && n != first){
+                second = n;
+            }
+        }
+
+        System.out.println(first + " " + second);
+    }
+}
