@@ -1,0 +1,3 @@
+class InvalidInput extends Exception{
+    InvalidInput(String msg){ super(msg); }
+}
