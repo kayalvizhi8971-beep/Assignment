@@ -1,0 +1,9 @@
+class Student {
+    Student(){ System.out.println("Default"); }
+    Student(int id){ System.out.println("ID="+id); }
+
+    public static void main(String[] args){
+        new Student();
+        new Student(101);
+    }
+}
