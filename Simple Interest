@@ -1,0 +1,12 @@
+class Interest {
+    double p,r,t;
+    Interest(double p,double r,double t){
+        this.p=p; this.r=r; this.t=t;
+    }
+    void calc(){
+        System.out.println((p*r*t)/100);
+    }
+    public static void main(String[] args){
+        new Interest(1000,5,2).calc();
+    }
+}
