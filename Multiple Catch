@@ -1,0 +1,11 @@
+class MultiCatch {
+    public static void main(String[] args){
+        try{
+            int a[]=new int[2];
+            a[5]=10;
+        }catch(ArithmeticException e){}
+        catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("Index Error");
+        }
+    }
+}
