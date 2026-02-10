@@ -1,0 +1,12 @@
+class MergeArray {
+    public static void main(String[] args) {
+        int a[]={1,2};
+        int b[]={3,4};
+        int c[]=new int[a.length+b.length];
+
+        System.arraycopy(a,0,c,0,a.length);
+        System.arraycopy(b,0,c,a.length,b.length);
+
+        for(int n:c) System.out.print(n+" ");
+    }
+}
