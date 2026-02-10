@@ -1,0 +1,3 @@
+class Person { void display(){System.out.println("Person");} }
+class Student extends Person { }
+class Graduate extends Student { }
